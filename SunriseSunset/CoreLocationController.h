@@ -7,7 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface CoreLocationController : NSObject
+@protocol CoreLocationControllerDelegate 
+@required
+- (void) locationUpdate: (CLLocation *)currentLoc;
+- (void) locationError: (NSError *)error;
+@end
+
+
+@interface CoreLocationController : NSObject <CLLocationManagerDelegate>
+{
+    CLLocationManager *locMgr;
+    id delegate;
+}
+
+@property (nonatomic, retain) CLLocation *locMgr;
+@property (nonatomic, assign) id delegate;
 
 @end

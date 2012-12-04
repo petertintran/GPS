@@ -2,13 +2,15 @@
 //  AppDelegate.m
 //  SunriseSunset
 //
-//  Created by Lion User on 26/11/2012.
+//  Created by Peter Tran on 26/11/2012.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+
+@synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

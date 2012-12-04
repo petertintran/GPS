@@ -12,6 +12,7 @@
 
 static USLocationsDatabase* _database;
 
+
 + (USLocationsDatabase*) database
 {
   if (_database == nil) {
@@ -36,10 +37,14 @@ static USLocationsDatabase* _database;
   sqlite3_close(_database);
 }
 
-- (NSArray*) someLocations
+- (NSArray*) someLocations : (NSString*) selectedState
 {
   NSMutableArray* rv = [[NSMutableArray alloc] init];
-  NSString* query = @"SELECT * FROM sol_places where region='US/AK'";
+    
+  NSString* query = [NSString stringWithFormat:@"SELECT * FROM sol_places where region='US/%@'", selectedState];
+
+
+    
   sqlite3_stmt *stmt;
   const unsigned char* text;
   NSString *name, *uc_name, *uc_alt_name, *region, *timezone;
@@ -80,7 +85,8 @@ static USLocationsDatabase* _database;
     }
     sqlite3_finalize(stmt);
   }
-  return rv;
+
+        return rv;
 }
 
 - (NSArray*) allLocations

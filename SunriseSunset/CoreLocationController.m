@@ -10,4 +10,24 @@
 
 @implementation CoreLocationController
 
+@synthesize locMgr = _locMgr;
+@synthesize delegate = _delegate;
+
+
+- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    if([self.delegate conformsToProtocol:@protocol(CoreLocationControllerDelegate)])
+    {
+        [self.delegate locationUpdate:newLocation];
+    }
+}
+
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    if([self.delegate conformsToProtocol:@protocol(CoreLocationControllerDelegate)])
+    {
+        [self.delegate locationError:error];
+    }
+}
+
 @end

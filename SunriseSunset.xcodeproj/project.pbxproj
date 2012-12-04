@@ -7,20 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0113BE1663D0C10004B569 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BD1663D0C10004B569 /* UIKit.framework */; };
-		CE0113C01663D0C10004B569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BF1663D0C10004B569 /* Foundation.framework */; };
-		CE0113C21663D0C10004B569 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113C11663D0C10004B569 /* CoreGraphics.framework */; };
+		296B947A1663FC6900BCB422 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 296B94791663FC6900BCB422 /* SearchViewController.m */; };
+		296B947E1664062A00BCB422 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296B947B166405F300BCB422 /* CoreLocation.framework */; };
+		296B949216640DE800BCB422 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 296B949116640DE800BCB422 /* libsqlite3.dylib */; };
+		296B949C16640FC900BCB422 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 296B949B16640FC900BCB422 /* Location.m */; };
+		296B949D16640FC900BCB422 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 296B949B16640FC900BCB422 /* Location.m */; };
+		296B949E16641E5300BCB422 /* MacSunrise.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0114251663D1F90004B569 /* MacSunrise.m */; };
+		296B94A71664204C00BCB422 /* us_only.sq3 in Resources */ = {isa = PBXBuildFile; fileRef = 296B94A61664204C00BCB422 /* us_only.sq3 */; };
+		2B1A62FE1666E55300F6E7A4 /* CitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A62FD1666E55300F6E7A4 /* CitiesViewController.m */; };
 		CE0113C81663D0C10004B569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0113C61663D0C10004B569 /* InfoPlist.strings */; };
 		CE0113CA1663D0C10004B569 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0113C91663D0C10004B569 /* main.m */; };
 		CE0113CE1663D0C10004B569 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0113CD1663D0C10004B569 /* AppDelegate.m */; };
 		CE0113D11663D0C10004B569 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0113CF1663D0C10004B569 /* MainStoryboard_iPhone.storyboard */; };
 		CE0113D41663D0C10004B569 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0113D21663D0C10004B569 /* MainStoryboard_iPad.storyboard */; };
 		CE0113D71663D0C10004B569 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0113D61663D0C10004B569 /* ViewController.m */; };
-		CE0113DF1663D0C10004B569 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113DE1663D0C10004B569 /* SenTestingKit.framework */; };
-		CE0113E01663D0C10004B569 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BD1663D0C10004B569 /* UIKit.framework */; };
-		CE0113E11663D0C10004B569 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BF1663D0C10004B569 /* Foundation.framework */; };
 		CE0113E91663D0C10004B569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0113E71663D0C10004B569 /* InfoPlist.strings */; };
 		CE0113EC1663D0C10004B569 /* SunriseSunsetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0113EB1663D0C10004B569 /* SunriseSunsetTests.m */; };
+		CE0114051663D1B60004B569 /* sunrise.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0114041663D1B60004B569 /* sunrise.m */; };
+		CE0114161663D1B70004B569 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE0114141663D1B70004B569 /* InfoPlist.strings */; };
+		CE0114191663D1B70004B569 /* sunriseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0114181663D1B70004B569 /* sunriseTests.m */; };
+		CE0114261663D1F90004B569 /* MacSunrise.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0114241663D1F90004B569 /* MacSunrise.h */; };
+		CE0114271663D1F90004B569 /* MacSunrise.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0114251663D1F90004B569 /* MacSunrise.m */; };
+		CE58C0121669EC34008DAD39 /* USLocationsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CE58C0111669EC34008DAD39 /* USLocationsDatabase.m */; };
+		CEB3942A166D267C00036A7A /* Moon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB39427166D267C00036A7A /* Moon.png */; };
+		CEB3942B166D267C00036A7A /* Sun.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB39428166D267C00036A7A /* Sun.png */; };
+		CECB8E2A166C0A1B00DA1C19 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB8E29166C0A1B00DA1C19 /* CalcViewController.m */; };
+		CECFCD4C166951F400725AAB /* us_only.sq3 in Resources */ = {isa = PBXBuildFile; fileRef = 296B94A61664204C00BCB422 /* us_only.sq3 */; };
+		CEFE3FE41663D83600248741 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BD1663D0C10004B569 /* UIKit.framework */; };
+		CEFE3FE51663D84100248741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BF1663D0C10004B569 /* Foundation.framework */; };
+		CEFE3FE61663D84C00248741 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113C11663D0C10004B569 /* CoreGraphics.framework */; };
+		CEFE3FEA1663D87A00248741 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BD1663D0C10004B569 /* UIKit.framework */; };
+		CEFE3FEB1663D88100248741 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BF1663D0C10004B569 /* Foundation.framework */; };
+		CEFE3FEC1663D89100248741 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113DE1663D0C10004B569 /* SenTestingKit.framework */; };
+		CEFE3FEE1663D8BE00248741 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113DE1663D0C10004B569 /* SenTestingKit.framework */; };
+		CEFE3FF11663D8F900248741 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0113BD1663D0C10004B569 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +51,25 @@
 			remoteGlobalIDString = CE0113B81663D0C10004B569;
 			remoteInfo = SunriseSunset;
 		};
+		CE01140E1663D1B70004B569 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0113B01663D0C10004B569 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0113F81663D1B60004B569;
+			remoteInfo = sunrise;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		296B94781663FC6900BCB422 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		296B94791663FC6900BCB422 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		296B947B166405F300BCB422 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		296B949116640DE800BCB422 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		296B949A16640FC900BCB422 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		296B949B16640FC900BCB422 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		296B94A61664204C00BCB422 /* us_only.sq3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = us_only.sq3; sourceTree = "<group>"; };
+		2B1A62FC1666E55300F6E7A4 /* CitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesViewController.h; sourceTree = "<group>"; };
+		2B1A62FD1666E55300F6E7A4 /* CitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesViewController.m; sourceTree = "<group>"; };
 		CE0113B91663D0C10004B569 /* SunriseSunset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunriseSunset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0113BD1663D0C10004B569 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CE0113BF1663D0C10004B569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +90,27 @@
 		CE0113E81663D0C10004B569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE0113EA1663D0C10004B569 /* SunriseSunsetTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SunriseSunsetTests.h; sourceTree = "<group>"; };
 		CE0113EB1663D0C10004B569 /* SunriseSunsetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SunriseSunsetTests.m; sourceTree = "<group>"; };
+		CE0113F91663D1B60004B569 /* libsunrise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsunrise.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0113FA1663D1B60004B569 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		CE0113FD1663D1B60004B569 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CE0113FE1663D1B60004B569 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE0113FF1663D1B60004B569 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE0114021663D1B60004B569 /* sunrise-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sunrise-Prefix.pch"; sourceTree = "<group>"; };
+		CE0114031663D1B60004B569 /* sunrise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sunrise.h; sourceTree = "<group>"; };
+		CE0114041663D1B60004B569 /* sunrise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sunrise.m; sourceTree = "<group>"; };
+		CE01140B1663D1B60004B569 /* sunriseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sunriseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0114131663D1B70004B569 /* sunriseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sunriseTests-Info.plist"; sourceTree = "<group>"; };
+		CE0114151663D1B70004B569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE0114171663D1B70004B569 /* sunriseTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sunriseTests.h; sourceTree = "<group>"; };
+		CE0114181663D1B70004B569 /* sunriseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sunriseTests.m; sourceTree = "<group>"; };
+		CE0114241663D1F90004B569 /* MacSunrise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacSunrise.h; sourceTree = "<group>"; };
+		CE0114251663D1F90004B569 /* MacSunrise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacSunrise.m; sourceTree = "<group>"; };
+		CE58C0101669EC34008DAD39 /* USLocationsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USLocationsDatabase.h; sourceTree = "<group>"; };
+		CE58C0111669EC34008DAD39 /* USLocationsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USLocationsDatabase.m; sourceTree = "<group>"; };
+		CEB39427166D267C00036A7A /* Moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon.png; sourceTree = "<group>"; };
+		CEB39428166D267C00036A7A /* Sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sun.png; sourceTree = "<group>"; };
+		CECB8E28166C0A1B00DA1C19 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
+		CECB8E29166C0A1B00DA1C19 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0113BE1663D0C10004B569 /* UIKit.framework in Frameworks */,
-				CE0113C01663D0C10004B569 /* Foundation.framework in Frameworks */,
-				CE0113C21663D0C10004B569 /* CoreGraphics.framework in Frameworks */,
+				296B947E1664062A00BCB422 /* CoreLocation.framework in Frameworks */,
+				CEFE3FE61663D84C00248741 /* CoreGraphics.framework in Frameworks */,
+				CEFE3FE51663D84100248741 /* Foundation.framework in Frameworks */,
+				CEFE3FE41663D83600248741 /* UIKit.framework in Frameworks */,
+				296B949216640DE800BCB422 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,20 +130,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0113DF1663D0C10004B569 /* SenTestingKit.framework in Frameworks */,
-				CE0113E01663D0C10004B569 /* UIKit.framework in Frameworks */,
-				CE0113E11663D0C10004B569 /* Foundation.framework in Frameworks */,
+				CEFE3FEC1663D89100248741 /* SenTestingKit.framework in Frameworks */,
+				CEFE3FEB1663D88100248741 /* Foundation.framework in Frameworks */,
+				CEFE3FEA1663D87A00248741 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0113F61663D1B60004B569 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0114071663D1B60004B569 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFE3FF11663D8F900248741 /* UIKit.framework in Frameworks */,
+				CEFE3FEE1663D8BE00248741 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		296B949616640ECD00BCB422 /* USDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				CE58C0101669EC34008DAD39 /* USLocationsDatabase.h */,
+				CE58C0111669EC34008DAD39 /* USLocationsDatabase.m */,
+			);
+			name = USDatabase;
+			path = SunriseSunset;
+			sourceTree = "<group>";
+		};
 		CE0113AE1663D0C10004B569 = {
 			isa = PBXGroup;
 			children = (
+				CEB39424166D261F00036A7A /* Images */,
+				296B949616640ECD00BCB422 /* USDatabase */,
 				CE0113C31663D0C10004B569 /* SunriseSunset */,
 				CE0113E41663D0C10004B569 /* SunriseSunsetTests */,
+				CE0114001663D1B60004B569 /* sunrise */,
+				CE0114111663D1B70004B569 /* sunriseTests */,
 				CE0113BC1663D0C10004B569 /* Frameworks */,
 				CE0113BA1663D0C10004B569 /* Products */,
 			);
@@ -95,6 +184,8 @@
 			children = (
 				CE0113B91663D0C10004B569 /* SunriseSunset.app */,
 				CE0113DD1663D0C10004B569 /* SunriseSunsetTests.octest */,
+				CE0113F91663D1B60004B569 /* libsunrise.a */,
+				CE01140B1663D1B60004B569 /* sunriseTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,10 +193,14 @@
 		CE0113BC1663D0C10004B569 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				296B949116640DE800BCB422 /* libsqlite3.dylib */,
+				296B947B166405F300BCB422 /* CoreLocation.framework */,
 				CE0113BD1663D0C10004B569 /* UIKit.framework */,
 				CE0113BF1663D0C10004B569 /* Foundation.framework */,
 				CE0113C11663D0C10004B569 /* CoreGraphics.framework */,
 				CE0113DE1663D0C10004B569 /* SenTestingKit.framework */,
+				CE0113FA1663D1B60004B569 /* Cocoa.framework */,
+				CE0113FC1663D1B60004B569 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,8 +212,16 @@
 				CE0113CD1663D0C10004B569 /* AppDelegate.m */,
 				CE0113CF1663D0C10004B569 /* MainStoryboard_iPhone.storyboard */,
 				CE0113D21663D0C10004B569 /* MainStoryboard_iPad.storyboard */,
+				296B94781663FC6900BCB422 /* SearchViewController.h */,
+				296B94791663FC6900BCB422 /* SearchViewController.m */,
+				2B1A62FC1666E55300F6E7A4 /* CitiesViewController.h */,
+				2B1A62FD1666E55300F6E7A4 /* CitiesViewController.m */,
+				CECB8E28166C0A1B00DA1C19 /* CalcViewController.h */,
+				CECB8E29166C0A1B00DA1C19 /* CalcViewController.m */,
 				CE0113D51663D0C10004B569 /* ViewController.h */,
 				CE0113D61663D0C10004B569 /* ViewController.m */,
+				296B949A16640FC900BCB422 /* Location.h */,
+				296B949B16640FC900BCB422 /* Location.m */,
 				CE0113C41663D0C10004B569 /* Supporting Files */,
 			);
 			path = SunriseSunset;
@@ -127,6 +230,7 @@
 		CE0113C41663D0C10004B569 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				296B94A61664204C00BCB422 /* us_only.sq3 */,
 				CE0113C51663D0C10004B569 /* SunriseSunset-Info.plist */,
 				CE0113C61663D0C10004B569 /* InfoPlist.strings */,
 				CE0113C91663D0C10004B569 /* main.m */,
@@ -154,7 +258,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE0113FC1663D1B60004B569 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE0113FD1663D1B60004B569 /* AppKit.framework */,
+				CE0113FE1663D1B60004B569 /* CoreData.framework */,
+				CE0113FF1663D1B60004B569 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CE0114001663D1B60004B569 /* sunrise */ = {
+			isa = PBXGroup;
+			children = (
+				CE0114031663D1B60004B569 /* sunrise.h */,
+				CE0114241663D1F90004B569 /* MacSunrise.h */,
+				CE0114251663D1F90004B569 /* MacSunrise.m */,
+				CE0114041663D1B60004B569 /* sunrise.m */,
+				CE0114011663D1B60004B569 /* Supporting Files */,
+			);
+			path = sunrise;
+			sourceTree = "<group>";
+		};
+		CE0114011663D1B60004B569 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0114021663D1B60004B569 /* sunrise-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0114111663D1B70004B569 /* sunriseTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0114171663D1B70004B569 /* sunriseTests.h */,
+				CE0114181663D1B70004B569 /* sunriseTests.m */,
+				CE0114121663D1B70004B569 /* Supporting Files */,
+			);
+			path = sunriseTests;
+			sourceTree = "<group>";
+		};
+		CE0114121663D1B70004B569 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0114131663D1B70004B569 /* sunriseTests-Info.plist */,
+				CE0114141663D1B70004B569 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CEB39424166D261F00036A7A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CEB39427166D267C00036A7A /* Moon.png */,
+				CEB39428166D267C00036A7A /* Sun.png */,
+			);
+			name = Images;
+			path = SunriseSunset;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE0113F71663D1B60004B569 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0114261663D1F90004B569 /* MacSunrise.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CE0113B81663D0C10004B569 /* SunriseSunset */ = {
@@ -193,6 +367,42 @@
 			productReference = CE0113DD1663D0C10004B569 /* SunriseSunsetTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		CE0113F81663D1B60004B569 /* sunrise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE01141A1663D1B70004B569 /* Build configuration list for PBXNativeTarget "sunrise" */;
+			buildPhases = (
+				CE0113F51663D1B60004B569 /* Sources */,
+				CE0113F61663D1B60004B569 /* Frameworks */,
+				CE0113F71663D1B60004B569 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sunrise;
+			productName = sunrise;
+			productReference = CE0113F91663D1B60004B569 /* libsunrise.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CE01140A1663D1B60004B569 /* sunriseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE01141D1663D1B70004B569 /* Build configuration list for PBXNativeTarget "sunriseTests" */;
+			buildPhases = (
+				CE0114061663D1B60004B569 /* Sources */,
+				CE0114071663D1B60004B569 /* Frameworks */,
+				CE0114081663D1B60004B569 /* Resources */,
+				CE0114091663D1B60004B569 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE01140F1663D1B70004B569 /* PBXTargetDependency */,
+			);
+			name = sunriseTests;
+			productName = sunriseTests;
+			productReference = CE01140B1663D1B60004B569 /* sunriseTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -216,6 +426,8 @@
 			targets = (
 				CE0113B81663D0C10004B569 /* SunriseSunset */,
 				CE0113DC1663D0C10004B569 /* SunriseSunsetTests */,
+				CE0113F81663D1B60004B569 /* sunrise */,
+				CE01140A1663D1B60004B569 /* sunriseTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,9 +437,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECFCD4C166951F400725AAB /* us_only.sq3 in Resources */,
 				CE0113C81663D0C10004B569 /* InfoPlist.strings in Resources */,
 				CE0113D11663D0C10004B569 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CE0113D41663D0C10004B569 /* MainStoryboard_iPad.storyboard in Resources */,
+				CEB3942A166D267C00036A7A /* Moon.png in Resources */,
+				CEB3942B166D267C00036A7A /* Sun.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +451,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0113E91663D0C10004B569 /* InfoPlist.strings in Resources */,
+				296B94A71664204C00BCB422 /* us_only.sq3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0114081663D1B60004B569 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0114161663D1B70004B569 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +479,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		CE0114091663D1B60004B569 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,9 +499,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296B949E16641E5300BCB422 /* MacSunrise.m in Sources */,
 				CE0113CA1663D0C10004B569 /* main.m in Sources */,
 				CE0113CE1663D0C10004B569 /* AppDelegate.m in Sources */,
 				CE0113D71663D0C10004B569 /* ViewController.m in Sources */,
+				296B947A1663FC6900BCB422 /* SearchViewController.m in Sources */,
+				296B949C16640FC900BCB422 /* Location.m in Sources */,
+				2B1A62FE1666E55300F6E7A4 /* CitiesViewController.m in Sources */,
+				CE58C0121669EC34008DAD39 /* USLocationsDatabase.m in Sources */,
+				CECB8E2A166C0A1B00DA1C19 /* CalcViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +516,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0113EC1663D0C10004B569 /* SunriseSunsetTests.m in Sources */,
+				296B949D16640FC900BCB422 /* Location.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0113F51663D1B60004B569 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0114051663D1B60004B569 /* sunrise.m in Sources */,
+				CE0114271663D1F90004B569 /* MacSunrise.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0114061663D1B60004B569 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0114191663D1B70004B569 /* sunriseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +544,11 @@
 			isa = PBXTargetDependency;
 			target = CE0113B81663D0C10004B569 /* SunriseSunset */;
 			targetProxy = CE0113E21663D0C10004B569 /* PBXContainerItemProxy */;
+		};
+		CE01140F1663D1B70004B569 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0113F81663D1B60004B569 /* sunrise */;
+			targetProxy = CE01140E1663D1B70004B569 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -315,6 +581,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE0113E81663D0C10004B569 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE0114141663D1B70004B569 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0114151663D1B70004B569 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -379,6 +653,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunriseSunset/SunriseSunset-Prefix.pch";
 				INFOPLIST_FILE = "SunriseSunset/SunriseSunset-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,6 +668,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SunriseSunset/SunriseSunset-Prefix.pch";
 				INFOPLIST_FILE = "SunriseSunset/SunriseSunset-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -429,6 +711,84 @@
 			};
 			name = Release;
 		};
+		CE01141B1663D1B70004B569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sunrise/sunrise-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE01141C1663D1B70004B569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sunrise/sunrise-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INSTALL_PATH = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CE01141E1663D1B70004B569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sunrise/sunrise-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "sunriseTests/sunriseTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		CE01141F1663D1B70004B569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "sunrise/sunrise-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "sunriseTests/sunriseTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +808,7 @@
 				CE0113F11663D0C10004B569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE0113F21663D0C10004B569 /* Build configuration list for PBXNativeTarget "SunriseSunsetTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +817,25 @@
 				CE0113F41663D0C10004B569 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE01141A1663D1B70004B569 /* Build configuration list for PBXNativeTarget "sunrise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE01141B1663D1B70004B569 /* Debug */,
+				CE01141C1663D1B70004B569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE01141D1663D1B70004B569 /* Build configuration list for PBXNativeTarget "sunriseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE01141E1663D1B70004B569 /* Debug */,
+				CE01141F1663D1B70004B569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

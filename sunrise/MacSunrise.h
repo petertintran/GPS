@@ -70,4 +70,4 @@ double asinDeg( double x );
 double acosDeg( double x );
 double atanDeg( double x );
 double lookupZenith( twilight_t twilight );
-double calculateSunriseOrSunset( struct tm* date, double latitude, double longitude, twilight_t twilight, BOOL isRising );
+double calculateSunriseOrSunset( struct tm* date, double , double longitude , twilight_t twilight, BOOL isRising );

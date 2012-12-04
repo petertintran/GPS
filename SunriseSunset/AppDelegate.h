@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  SunriseSunset
 //
-//  Created by Lion User on 26/11/2012.
+//  Created by Peter Tran on 26/11/2012.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
 //
 

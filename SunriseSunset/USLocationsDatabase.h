@@ -15,8 +15,11 @@
   sqlite3* _database;
 }
 
+
 + (USLocationsDatabase*) database;
-- (NSArray*) someLocations;
+- (NSArray*) someLocations: (NSString*) selectedState;
 - (NSArray*) allLocations;
+
+
 
 @end

@@ -2,11 +2,13 @@
 //  SearchViewController.m
 //  SunriseSunset
 //
-//  Created by cpsc491t on 11/26/12.
+//  Created by Peter Tran on 11/26/12.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
 //
 
 #import "SearchViewController.h"
+#import "CitiesViewController.h"
+
 
 @interface SearchViewController ()
 
@@ -14,108 +16,191 @@
 
 @implementation SearchViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize tableView;
+@synthesize arrayStates = _arrayStates;
+@synthesize arrayAbvStates = _arrayAbvStates;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //Arrays for the States and State Abreviations
+    self.arrayStates = [[NSArray alloc] initWithObjects:
+                        @"Alabama",
+                        @"Alaska",
+                        @"Arizona",
+                        @"Arkansas",
+                        @"California",
+                        @"Colorado",
+                        @"Connecticut",
+                        @"Delaware",
+                        @"Florida",
+                        @"Georgia",
+                        @"Hawaii",
+                        @"Idaho",
+                        @"Illinois",
+                        @"Indiana",
+                        @"Iowa",
+                        @"Kansas",
+                        @"Kentucky",
+                        @"Louisana",
+                        @"Maine",
+                        @"Maryland",
+                        @"Massachusetts",
+                        @"Michigan",
+                        @"Minnesota",
+                        @"Missisippi",
+                        @"Missouri",
+                        @"Montana",
+                        @"Nebraska",
+                        @"Nevada",
+                        @"New Hampshire",
+                        @"New Jersey",
+                        @"New Mexico",
+                        @"New York",
+                        @"North Carolina",
+                        @"North Dakota",
+                        @"Ohio",
+                        @"Oklahoma",
+                        @"Oregon",
+                        @"Pennsylvania",
+                        @"Rhode Island",
+                        @"South Carolina",
+                        @"South Dakota",
+                        @"Tennessee",
+                        @"Texas",
+                        @"Utah",
+                        @"Vermont",
+                        @"Virgina",
+                        @"Washington",
+                        @"West Virgina",
+                        @"Wisconsin",
+                        @"Wyoming",
+                        nil];
+    self.arrayAbvStates = [[NSArray alloc] initWithObjects:
+                           @"US/AL",
+                           @"US/AK",
+                           @"US/AZ",
+                           @"US/AR",
+                           @"US/CA",
+                           @"US/CO",
+                           @"US/CT",
+                           @"US/DE",
+                           @"US/FL",
+                           @"US/GA",
+                           @"US/HI",
+                           @"US/ID",
+                           @"US/IL",
+                           @"US/IN",
+                           @"US/IA",
+                           @"US/KS",
+                           @"US/KY",
+                           @"US/LA",
+                           @"US/ME",
+                           @"US/MD",
+                           @"US/MA",
+                           @"US/MI",
+                           @"US/MN",
+                           @"US/MS",
+                           @"US/MO",
+                           @"US/MT",
+                           @"US/NE",
+                           @"US/NV",
+                           @"US/NH",
+                           @"US/NJ",
+                           @"US/NM",
+                           @"US/NY",
+                           @"US/NC",
+                           @"US/ND",
+                           @"US/OH",
+                           @"US/OK",
+                           @"US/OR",
+                           @"US/PA",
+                           @"US/RI",
+                           @"US/SC",
+                           @"US/SD",
+                           @"US/TN",
+                           @"US/TX",
+                           @"US/UT",
+                           @"US/VT",
+                           @"US/VA",
+                           @"US/WA",
+                           @"US/WV",
+                           @"US/WI",
+                           @"US/WY",
+                           nil];
+
+}
+
+- (void)viewDidUnload {
+    [self setTableView:nil];
+    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    self.arrayStates = nil;
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.arrayStates count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+
+    //Check to see if we can reuse a cell
+    UITableViewCell * cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    // Configure the cell...
+    //If there are no cells to reuse we create a new one
+    if(cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    }
     
+    //Adds a detail view accessory
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
+    //Adjust cell size for readable text
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+    
+    //Fill in the cell with text from array(States and its Abbreviations)
+    cell.textLabel.text = [self.arrayStates objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [self.arrayAbvStates objectAtIndex:indexPath.row];
+
+    //Returns the cell
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"showStateSelection"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CitiesViewController *destViewController = segue.destinationViewController;
+        destViewController.selectedStateIndex = indexPath.row;
+    }
 }
 
 @end
