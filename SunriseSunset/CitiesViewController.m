@@ -15,15 +15,15 @@
 
 @implementation CitiesViewController
 
-@synthesize USLoc = _USLoc;
-
-
 @synthesize tableView;
 
 @synthesize locations = _locations;
 
 @synthesize selectedStateIndex = _selectedStateIndex;
 @synthesize selectedState;
+
+@synthesize sectionsArray;
+@synthesize collation;
 
 
 
@@ -264,16 +264,14 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
-    return 1;
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.locations count];
+    NSArray *citiesInSection = [sectionsArray objectAtIndex:section];
+    NSLog(@"Coll %i", [citiesInSection count]);
+    return [citiesInSection count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -287,6 +285,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
+    //
+    NSArray *citiesInSection = [sectionsArray objectAtIndex: indexPath.section];
+    
     //Adds a detail view accessory
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
@@ -294,9 +295,10 @@
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
     
     //Fill in the cell with text from Database
-    Location *location = [self.locations objectAtIndex: indexPath.row];
-    cell.textLabel.text = location.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%g, %g)", location.region, location.coord->longitude, location.coord->latitude];
+    Location *citiesList = [citiesInSection objectAtIndex: indexPath.row];
+    
+    cell.textLabel.text = citiesList.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%g, %g)", citiesList.region, citiesList.coord->longitude, citiesList.coord->latitude];
     
     //Returns the cell
     return cell;
@@ -304,16 +306,6 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -336,5 +328,91 @@
         //NSLog(@"Lat: %f", destViewController.passedLat);
     }
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return [[collation sectionTitles] count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[collation sectionTitles] objectAtIndex:section];
+}
+
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [collation sectionIndexTitles];
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [collation sectionForSectionIndexTitleAtIndex:index];
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void) configureSections
+{
+    //
+    self.collation = [UILocalizedIndexedCollation currentCollation];
+    
+    NSInteger index;
+    NSInteger sectionTitlesCount = [[collation sectionTitles] count];
+    
+    NSMutableArray *newSectionsArray = [[NSMutableArray alloc] initWithCapacity:sectionTitlesCount];
+    
+    //
+    for(index = 0; index < sectionTitlesCount; index++)
+    {
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        [newSectionsArray addObject:array];
+    }
+    
+    //
+    for(Location* citiesList in self.locations)
+    {
+        //
+        NSInteger sectionNumber = [collation sectionForObject:citiesList collationStringSelector:@selector(name)];
+        
+        //
+        NSMutableArray *sectionCityNames = [newSectionsArray objectAtIndex:sectionNumber];
+        
+        //
+        [sectionCityNames addObject:citiesList];
+    }
+    
+    //
+    for(index = 0; index < sectionTitlesCount; index++)
+    {
+        NSMutableArray *citiesForSection = [newSectionsArray objectAtIndex:index];
+        
+        //
+        NSArray *sortedCitiesSection = [collation sortedArrayFromArray:citiesForSection collationStringSelector:@selector(name)];
+        
+        //
+        [newSectionsArray replaceObjectAtIndex:index withObject:sortedCitiesSection];
+    }
+    self.sectionsArray = newSectionsArray;
+}
+
+
+//**This method IS NEEDED, you just don't need to retain / release because of ARC**
+- (void)setCities:(NSMutableArray *)newDataArray
+{
+    if (newDataArray != _locations) {
+        //[_cities release];
+        _locations = newDataArray;
+    }
+    if (_locations == nil) {
+        self.sectionsArray = nil;
+    }
+    else {
+        [self configureSections];
+    }
+}
+
 
 @end

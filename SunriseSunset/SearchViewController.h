@@ -17,10 +17,15 @@
     NSArray * _locations;
     IBOutlet UITableView *tableView;
     
+
+    
 }
 
 @property (nonatomic, retain) NSArray * arrayStates;
 @property (nonatomic, retain) NSArray * arrayAbvStates;
 @property (nonatomic, retain) NSArray * locations;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
+
 @end

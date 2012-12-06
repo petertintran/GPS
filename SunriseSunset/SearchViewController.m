@@ -145,6 +145,7 @@
     self.arrayStates = nil;
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -184,6 +185,8 @@
     //Returns the cell
     return cell;
 }
+
+
 
 
 #pragma mark - Table view delegate

@@ -11,18 +11,28 @@
 #import "USLocationsDatabase.h"
 
 
-@interface CitiesViewController : UITableViewController
+@interface CitiesViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 {
 
     NSArray * _locations;
     IBOutlet UITableView *tableView;
     
+    //
+    NSMutableArray *sectionsArray;
+    UILocalizedIndexedCollation *collation;
+    
 }
 
-@property USLocationsDatabase *USLoc;
 
 @property (nonatomic, retain) NSArray * locations;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, retain) NSString * selectedState;
 @property (assign) int selectedStateIndex;
+
+@property (nonatomic, retain) NSArray * sectionsArray;
+@property (nonatomic, retain) UILocalizedIndexedCollation* collation;
+
+- (void) configureSections;
+- (void) setCities:(NSMutableArray *)newDataArray;
+
 @end
