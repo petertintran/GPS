@@ -425,14 +425,62 @@
             <point key="canvasLocation" x="1549" y="585"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CalcViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalcViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="_labelCalcSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelCalcSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelCity" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelState" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageMoon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageSun" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="labelCalcSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCalcSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelCity" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelState" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CitiesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CitiesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SearchViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="calculateSunriseSunset:"/>
+                <relationship kind="action" name="getCurrentLocation:"/>
+                <relationship kind="outlet" name="_buttonCalc" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="_labelLat" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelLong" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="_labelSunset" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="buttonCalc" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imageCurrentMoon" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageCurrentSun" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="labelLat" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLong" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelSunrise" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelSunset" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZYu-au-tEB"/>
-        <segue reference="3rI-Ja-M52"/>
         <segue reference="4gI-Dg-HXT"/>
+        <segue reference="2xS-de-HpI"/>
+        <segue reference="ZYu-au-tEB"/>
     </inferredMetricsTieBreakers>
 </document>

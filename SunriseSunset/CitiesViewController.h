@@ -33,6 +33,6 @@
 @property (nonatomic, retain) UILocalizedIndexedCollation* collation;
 
 - (void) configureSections;
-- (void) setCities:(NSMutableArray *)newDataArray;
+- (void) setLocations:(NSArray *)newDataArray;
 
 @end

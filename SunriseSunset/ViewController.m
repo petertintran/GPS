@@ -6,7 +6,7 @@
 //  Code given by Michael Shafae
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
 //
-//  Code for calculating current Latitude and Longitude was recieved from: http://www.appcoda.com/how-to-get-current-location-iphone-user/
+//  Code for calculating current Latitude and Longitude was retrieved from: http://www.appcoda.com/how-to-get-current-location-iphone-user/
 //
 
 #import "ViewController.h"

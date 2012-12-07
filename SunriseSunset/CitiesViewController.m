@@ -5,6 +5,8 @@
 //  Created by Peter Tran on 11/28/12.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
 //
+//  Code for adding sections to table view retrieved from: https://developer.apple.com/library/ios/#samplecode/TableViewSuite/Introduction/Intro.html#//apple_ref/doc/uid/DTS40007318-Intro-DontLinkElementID_2
+//
 
 #import "CitiesViewController.h"
 #import "CalcViewController.h"
@@ -247,6 +249,7 @@
     [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+
     // e.g. self.myOutlet = nil;
 }
 
@@ -270,7 +273,6 @@
 {
     // Return the number of rows in the section.
     NSArray *citiesInSection = [sectionsArray objectAtIndex:section];
-    NSLog(@"Coll %i", [citiesInSection count]);
     return [citiesInSection count];
 }
 
@@ -285,7 +287,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
     }
     
-    //
+    //Creates an array for the specific section selected
     NSArray *citiesInSection = [sectionsArray objectAtIndex: indexPath.section];
     
     //Adds a detail view accessory
@@ -329,6 +331,8 @@
     }
 }
 
+//Code retrieved from
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -356,7 +360,7 @@
 
 - (void) configureSections
 {
-    //
+    //Gets reference to collation
     self.collation = [UILocalizedIndexedCollation currentCollation];
     
     NSInteger index;
@@ -364,27 +368,27 @@
     
     NSMutableArray *newSectionsArray = [[NSMutableArray alloc] initWithCapacity:sectionTitlesCount];
     
-    //
+    //Creates the sections array
     for(index = 0; index < sectionTitlesCount; index++)
     {
         NSMutableArray *array = [[NSMutableArray alloc] init];
         [newSectionsArray addObject:array];
     }
     
-    //
+    //Divides the cities to its specific section
     for(Location* citiesList in self.locations)
     {
-        //
+        //Uses collation which section the city falls under
         NSInteger sectionNumber = [collation sectionForObject:citiesList collationStringSelector:@selector(name)];
         
-        //
+        //Grabs the array for the specific section
         NSMutableArray *sectionCityNames = [newSectionsArray objectAtIndex:sectionNumber];
         
-        //
+        //Add city to the current section
         [sectionCityNames addObject:citiesList];
     }
     
-    //
+    //Sorts the each section array made
     for(index = 0; index < sectionTitlesCount; index++)
     {
         NSMutableArray *citiesForSection = [newSectionsArray objectAtIndex:index];
@@ -399,11 +403,9 @@
 }
 
 
-//**This method IS NEEDED, you just don't need to retain / release because of ARC**
-- (void)setCities:(NSMutableArray *)newDataArray
+- (void)setLocations:(NSArray *)newDataArray
 {
     if (newDataArray != _locations) {
-        //[_cities release];
         _locations = newDataArray;
     }
     if (_locations == nil) {
