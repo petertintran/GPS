@@ -2,7 +2,7 @@
 # Author: Peter Tran
 # Assignment: GPS - Assignment 7
 # Email: petertintran@gmail.com
-# Description: Integrate location finding services to SunriseSunset
+# Description: Integrate location finding services to SunriseSunset as well as an index to #              provide easier navigation through the database
 #
 
  -------------------------
@@ -25,7 +25,11 @@
 •••••••••••••••••••••••••••
 • 1. Project Scope        *
 •••••••••••••••••••••••••••
- ...
+ The app is the same as before, however, new features have been added. A GPS has been 
+ integrated into the app which will give the latitude and longitude of the user's current 
+ location. After obtaining this information the user can then calculate the sunrise and 
+ sunset of the location they are at. An index has been incorporated into the app which 
+ allows for easier navigation through the list of cities for a specific state  
 
 
 •••••••••••••••••••••••••••
@@ -38,14 +42,24 @@
 •••••••••••••••••••••••••••
 • 3. How to Use           *
 •••••••••••••••••••••••••••
- ...
+ To access the GPS the user must press on the "Current Location" button. From there the 
+ user can find their current latitude and longitude by pressing the "Get Location" button. 
+ By pressing that button the location services of the app will activate and through that 
+ it will use the built in GPS to find the latitude and longitude of the user. After find 
+ the user's current lat and long the user can then calculate the sunrise and sunset by 
+ pressing on the "Calculate" button. The "Calculate" button is disabled by default until 
+ the user has found their current lat and long. For the index, when the user is sent to 
+ the table that displays the cities for the specific state they have chosen a index bar on 
+ the right side will be present. From there the user can easily navigate the table by 
+ pressing on the  letter they wish to jump to. 
 
 
 •••••••••••••••••••••••••••
 • 5. Bug/Limitations      *
 •••••••••••••••••••••••••••
  There are no bugs in this application.
-
+ Limitations: Like with the app in Assignment 6, the time calculated for sunrise and 
+ sunset will be off for states that are not on the west coast.
  
 
 •••••••••••••••••••••••••••
