@@ -1,6 +1,6 @@
 //
 //  Location.h
-//  SQLiteTableView
+//  SunriseSunsetGPS
 //
 //  Created by Michael Shafae on 11/8/12.
 //  Copyright (c) 2012 Michael Shafae. All rights reserved.

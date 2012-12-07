@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  SunriseSunset
+//  SunriseSunsetGPS
 //
 //  Created by Peter Tran on 26/11/2012.
 //  Code given by Michael Shafae
@@ -78,6 +78,9 @@ double CurrentLon;
         self.labelLat.text = [NSString stringWithFormat:@"%.4f", currentLocation.coordinate.latitude];
         CurrentLat = currentLocation.coordinate.latitude;
     }
+    
+    //Disables refreshing of current location every second
+    [locationManager stopUpdatingLocation];
 }
 
 #pragma mark - Calculations
@@ -86,8 +89,6 @@ double CurrentLon;
 {
     time_t now;
     struct tm* timeinfo;
-    
-
     
     time( &now );
     timeinfo = localtime( &now );

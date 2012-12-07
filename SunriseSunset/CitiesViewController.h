@@ -1,6 +1,6 @@
 //
 //  CitiesViewController.h
-//  SunriseSunset
+//  SunriseSunsetGPS
 //
 //  Created by Peter Tran on 11/28/12.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
@@ -17,7 +17,7 @@
     NSArray * _locations;
     IBOutlet UITableView *tableView;
     
-    //
+    //For use in creating sections
     NSMutableArray *sectionsArray;
     UILocalizedIndexedCollation *collation;
     

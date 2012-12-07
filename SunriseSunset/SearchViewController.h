@@ -1,6 +1,6 @@
 //
 //  SearchViewController.h
-//  SunriseSunset
+//  SunriseSunsetGPS
 //
 //  Created by Peter Tran on 11/26/12.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.

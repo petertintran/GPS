@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  SunriseSunset
+//  SunriseSunsetGPS
 //
 //  Created by Peter Tran on 26/11/2012.
 //  Code given by Michael Shafae

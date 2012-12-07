@@ -1,6 +1,6 @@
 //
 //  CitiesViewController.m
-//  SunriseSunset
+//  SunriseSunsetGPS
 //
 //  Created by Peter Tran on 11/28/12.
 //  Copyright (c) 2012 Tran.Peter. All rights reserved.
@@ -26,8 +26,6 @@
 
 @synthesize sectionsArray;
 @synthesize collation;
-
-
 
 
 - (void)viewDidLoad
@@ -268,7 +266,6 @@
 #pragma mark - Table view data source
 
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -308,7 +305,6 @@
 
 #pragma mark - Table view delegate
 
-
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"showCitySelection"])
@@ -331,7 +327,9 @@
     }
 }
 
-//Code retrieved from
+#pragma mark - Table view sections
+
+//Code retrieved from http://develeoper.apple.com
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -378,7 +376,7 @@
     //Divides the cities to its specific section
     for(Location* citiesList in self.locations)
     {
-        //Uses collation which section the city falls under
+        //Uses collation to determine which section the city falls under
         NSInteger sectionNumber = [collation sectionForObject:citiesList collationStringSelector:@selector(name)];
         
         //Grabs the array for the specific section
@@ -388,7 +386,7 @@
         [sectionCityNames addObject:citiesList];
     }
     
-    //Sorts the each section array made
+    //Sorts each section array made
     for(index = 0; index < sectionTitlesCount; index++)
     {
         NSMutableArray *citiesForSection = [newSectionsArray objectAtIndex:index];
