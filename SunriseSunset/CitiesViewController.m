@@ -299,6 +299,7 @@
     cell.textLabel.text = citiesList.name;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ (%g, %g)", citiesList.region, citiesList.coord->longitude, citiesList.coord->latitude];
     
+    
     //Returns the cell
     return cell;
 }
@@ -310,13 +311,19 @@
     if([segue.identifier isEqualToString:@"showCitySelection"])
     {
         
+        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Location *location = [self.locations objectAtIndex: indexPath.row];
+        //Location *location = [self.locations objectAtIndex: indexPath.row];
+        
+        //Fill in the cell with text from Database
+        NSArray *citiesInSection = [sectionsArray objectAtIndex: indexPath.section];
+        Location *citiesList = [citiesInSection objectAtIndex: indexPath.row];
+        
         CalcViewController *destViewController = segue.destinationViewController;
         destViewController.passedState = self.selectedState;
-        destViewController.passedLong = location.coord->longitude;
-        destViewController.passedLat = location.coord->latitude;
-        destViewController.passedCity = location.name;
+        destViewController.passedLong = citiesList.coord->longitude;
+        destViewController.passedLat = citiesList.coord->latitude;
+        destViewController.passedCity = citiesList.name;
         destViewController.passedStateInd = self.selectedStateIndex;
         
         //Variable Checking
